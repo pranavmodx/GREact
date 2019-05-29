@@ -1,9 +1,24 @@
 import React, { Component } from "react";
 import { Consumer } from "../../context";
+import { topicIDS } from "../../context";
 
 class Card extends Component {
-  fetchTopic = (currentTopicNo, dispatch) => {
-    dispatch({ type: "SHOW_TOPIC", payload: currentTopicNo + 1 });
+  fetchTopic = (currentTopicNo, dispatch, e) => {
+    console.log("Should be working");
+    console.log(e.currentTarget.name);
+    if (e.currentTarget.name === "Previous Topic") {
+      if (currentTopicNo === 0) {
+        dispatch({ type: "SHOW_TOPIC", payload: topicIDS.length - 1 });
+      } else {
+        dispatch({ type: "SHOW_TOPIC", payload: currentTopicNo - 1 });
+      }
+    } else if (e.currentTarget.name === "Next Topic") {
+      if (currentTopicNo === topicIDS.length - 1) {
+        dispatch({ type: "SHOW_TOPIC", payload: 0 });
+      } else {
+        dispatch({ type: "SHOW_TOPIC", payload: currentTopicNo + 1 });
+      }
+    }
   };
 
   render() {
@@ -11,13 +26,14 @@ class Card extends Component {
       <Consumer>
         {value => {
           const { currentWord } = this.props;
-          const { currentTopicNo, topicIDS, dispatch } = value;
+          const { currentTopicNo, dispatch } = value;
           return (
             <div className="container w-75">
               <div className="card mb-4">
                 <div className="card-header bg-success pt-4 mb-3">
                   <div className="h1">
                     <button
+                      name="Previous Topic"
                       className="btn float-left btn-success text-dark btn-lg"
                       onClick={this.fetchTopic.bind(
                         this,
@@ -25,13 +41,26 @@ class Card extends Component {
                         dispatch
                       )}
                     >
-                      <i className="fas fa-chevron-left" />
+                      <i
+                        name="Previous Topic"
+                        className="fas fa-chevron-left"
+                      />
                     </button>
                     <span className="font-weight-bold mr-3">Topic:</span>
                     {currentWord.TOPIC}
-                    {/* <span class="ml-3 badge badge-dark badge-pill">3</span> */}
-                    <button className="btn float-right btn-success text-dark btn-lg">
-                      <i className="fas fa-chevron-right" />
+                    <span class="ml-3 badge badge-dark badge-pill">
+                      {topicIDS[currentTopicNo + 1] - topicIDS[currentTopicNo]}
+                    </span>
+                    <button
+                      name="Next Topic"
+                      className="btn float-right btn-success text-dark btn-lg"
+                      onClick={this.fetchTopic.bind(
+                        this,
+                        currentTopicNo,
+                        dispatch
+                      )}
+                    >
+                      <i name="Next Topic" className="fas fa-chevron-right" />
                     </button>
                   </div>
                 </div>

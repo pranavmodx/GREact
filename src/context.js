@@ -3,7 +3,7 @@ import greData from "./gredata.json";
 
 const Context = React.createContext();
 
-let topicIDS = [];
+export let topicIDS = [];
 for (let i = 0; i < greData.length; i++) {
   if (i === 0) {
     topicIDS.push(greData[i].ID);
@@ -11,20 +11,28 @@ for (let i = 0; i < greData.length; i++) {
     topicIDS.push(greData[i].ID);
   }
 }
-// console.log(topicIDS);
+console.log(topicIDS);
 
 const reducer = (state, action) => {
   switch (action.type) {
     case "SHOW_WORD":
       return {
         ...state,
+        // Magic line
+        currentTopicNo: Number(greData[action.payload].TOPIC.slice(0, 3)) - 1,
+        currentWord: greData[action.payload]
+      };
+    case "SHOW_RANDOM_WORD":
+      return {
+        ...state,
+        currentTopicNo: Number(greData[action.payload].TOPIC.slice(0, 3)) - 1,
         currentWord: greData[action.payload]
       };
     case "SHOW_TOPIC":
       return {
         ...state,
-        currentTopicNo: topicIDS[action.payload],
-        currentWord: greData[]
+        currentTopicNo: action.payload,
+        currentWord: greData[topicIDS[action.payload]]
       };
     default:
       return state;

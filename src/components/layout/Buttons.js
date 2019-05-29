@@ -15,10 +15,14 @@ class Buttons extends Component {
       } else {
         dispatch({ type: "SHOW_WORD", payload: currentWord.ID + 1 });
       }
-    } else if (e.target.name === "Random Word") {
+    }
+  }
+
+  onRandomClick(totalWordsLength, dispatch, e) {
+    if (e.target.name === "Random Word") {
       dispatch({
-        type: "SHOW_WORD",
-        payload: Math.floor(Math.random() * 1870) + 1
+        type: "SHOW_RANDOM_WORD",
+        payload: Math.floor(Math.random() * totalWordsLength - 1) + 1
       });
     }
   }
@@ -46,12 +50,7 @@ class Buttons extends Component {
               <button
                 name="Random Word"
                 className="btn btn-dark px-4"
-                onClick={this.onClick.bind(
-                  this,
-                  currentWord,
-                  words.length,
-                  dispatch
-                )}
+                onClick={this.onRandomClick.bind(this, words.length, dispatch)}
               >
                 <i className="fas fa-random mr-1" />
                 Random Word
