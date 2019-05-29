@@ -26,7 +26,14 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <Link className="nav-link text-light" to="/about">
-                  <i className="fas fa-question mr-1" />About
+                  <i className="fas fa-question mr-1" />
+                  About
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-light" to="/topics">
+                  <i className="fas fa-tree mr-1" />
+                  Topics
                 </Link>
               </li>
             </ul>

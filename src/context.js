@@ -34,6 +34,12 @@ const reducer = (state, action) => {
         currentTopicNo: action.payload,
         currentWord: greData[topicIDS[action.payload]]
       };
+    case "LOAD_TOPIC":
+      return {
+        ...state,
+        currentTopicNo: Number(greData[action.payload].TOPIC.slice(0, 3)) - 1,
+        currentWord: greData[action.payload]
+      };
     default:
       return state;
   }
@@ -44,7 +50,6 @@ export class Provider extends Component {
     words: greData,
     currentWord: greData[0],
     currentTopicNo: 0,
-    topicIDS: topicIDS,
     dispatch: action => this.setState(state => reducer(state, action))
   };
 

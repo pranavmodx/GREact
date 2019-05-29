@@ -52,7 +52,7 @@ class Buttons extends Component {
                 className="btn btn-dark px-4"
                 onClick={this.onRandomClick.bind(this, words.length, dispatch)}
               >
-                <i className="fas fa-random mr-1" />
+                <i className="fas fa-random mr-2" />
                 Random Word
               </button>
               <button
