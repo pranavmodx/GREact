@@ -6,16 +6,18 @@ class Progress extends Component {
     return (
       <Consumer>
         {value => {
-          const { words } = value;
+          const { words, currentWord } = value;
           return (
-            <div className="text-center container w-75 mx-auto mb-5">
+            <div className="text-center container mx-auto mb-5">
               <div>
-                <h5 className="text-info">1 of {words.length}</h5>
+                <h5 className="text-info">
+                  {currentWord.ID + 1} of {words.length}
+                </h5>
               </div>
               <div className="progress">
                 <div
                   className="progress-bar bg-info"
-                  style={{ width: `${1000 / 1800}%` }}
+                  style={{ width: `${currentWord.ID / 18}%` }}
                 />
               </div>
             </div>
