@@ -40,6 +40,12 @@ const reducer = (state, action) => {
         currentTopicNo: Number(greData[action.payload].TOPIC.slice(0, 3)) - 1,
         currentWord: greData[action.payload]
       };
+    case "SHOW_SEARCH_RESULT":
+      return {
+        ...state,
+        currentTopicNo: Number(greData[action.payload].TOPIC.slice(0, 3)) - 1,
+        currentWord: greData[action.payload]
+      };
     default:
       return state;
   }

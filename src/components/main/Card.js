@@ -48,7 +48,7 @@ class Card extends Component {
                     </button>
                     <span className="font-weight-bold mr-3">Topic:</span>
                     {currentWord.TOPIC}
-                    <span class="ml-3 badge badge-dark badge-pill">
+                    <span className="ml-3 badge badge-dark badge-pill">
                       {topicIDS[currentTopicNo + 1] - topicIDS[currentTopicNo]}
                     </span>
                     <button
@@ -66,17 +66,17 @@ class Card extends Component {
                 </div>
                 <div className="card-body">
                   <ul className="list-group text-left">
-                    <li className="list-group-item bg-light h5">
-                      <span className="font-weight-bold mr-1">Word:</span>
+                    <li className="list-group-item bg-light text-info h4">
+                      <span className="font-weight-bold text-info mr-1">
+                        Word:
+                      </span>
                       {currentWord.WORD}
                     </li>
-                    <li className="list-group-item bg-light h5 text-info">
-                      <span className="font-weight-bold mr-1 text-info">
-                        Meaning:
-                      </span>
+                    <li className="list-group-item bg-light h4">
+                      <span className="font-weight-bold mr-1">Meaning:</span>
                       {currentWord.MEANING}
                     </li>
-                    <li className="list-group-item bg-light h5">
+                    <li className="list-group-item bg-light h4">
                       <span className="font-weight-bold mr-1">Sentence:</span>
                       {currentWord.SENTENCE}
                     </li>

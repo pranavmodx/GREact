@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="container">
+    <div className="container w-75">
       <p className="lead text-justify">
         GREact is a React JS based web application which neatly displays
         important words for GRE exam along with their meanings and example
