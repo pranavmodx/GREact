@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/GREact/static/css/main.93c999f7.chunk.css",
-    "main.js": "/GREact/static/js/main.099a9021.chunk.js",
-    "main.js.map": "/GREact/static/js/main.099a9021.chunk.js.map",
+    "main.js": "/GREact/static/js/main.1da48228.chunk.js",
+    "main.js.map": "/GREact/static/js/main.1da48228.chunk.js.map",
     "runtime~main.js": "/GREact/static/js/runtime~main.3d5a89e9.js",
     "runtime~main.js.map": "/GREact/static/js/runtime~main.3d5a89e9.js.map",
     "static/css/2.266e55a5.chunk.css": "/GREact/static/css/2.266e55a5.chunk.css",
     "static/js/2.b7edcbb9.chunk.js": "/GREact/static/js/2.b7edcbb9.chunk.js",
     "static/js/2.b7edcbb9.chunk.js.map": "/GREact/static/js/2.b7edcbb9.chunk.js.map",
     "index.html": "/GREact/index.html",
-    "precache-manifest.b4f70caee47a636b4c310f0e98292f4f.js": "/GREact/precache-manifest.b4f70caee47a636b4c310f0e98292f4f.js",
+    "precache-manifest.bf71dddea13aea3a16627d7ef7e2f05b.js": "/GREact/precache-manifest.bf71dddea13aea3a16627d7ef7e2f05b.js",
     "service-worker.js": "/GREact/service-worker.js",
     "static/css/2.266e55a5.chunk.css.map": "/GREact/static/css/2.266e55a5.chunk.css.map",
     "static/css/main.93c999f7.chunk.css.map": "/GREact/static/css/main.93c999f7.chunk.css.map"
