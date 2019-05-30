@@ -97,7 +97,7 @@ class Navbar extends Component {
                   <Link className="navbar-brand text-success" to="/">
                     GREact
                   </Link>
-                  <ul className="navbar-nav ml-auto">
+                  <ul className="navbar-nav">
                     <li className="nav-item">
                       <Link className="nav-link text-light" to="/">
                         <i className="fas fa-home mr-1" />
