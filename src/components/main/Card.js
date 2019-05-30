@@ -66,7 +66,7 @@ class Card extends Component {
                 </div>
                 <div className="card-body">
                   <ul className="list-group text-left">
-                    <li className="list-group-item bg-light text-info h5">
+                    <li className="list-group-item bg-light text-info h3 mb-3">
                       <span className="font-weight-bold text-info mr-1">
                         Word:
                       </span>
