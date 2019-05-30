@@ -67,10 +67,10 @@ class Navbar extends Component {
   onKeyPress = (dispatch, e) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      console.log(e.target.value);
+      // console.log(e.target.value);
       for (let i = 0; i < words.length; i++) {
         if (words[i].WORD === e.target.value) {
-          console.log("YES");
+          // console.log("YES");
           dispatch({ type: "SHOW_SEARCH_RESULT", payload: i });
           break;
         }

@@ -11,7 +11,7 @@ for (let i = 0; i < greData.length; i++) {
     topicIDS.push(greData[i].ID);
   }
 }
-console.log(topicIDS);
+// console.log(topicIDS);
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -60,7 +60,7 @@ export class Provider extends Component {
   };
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     return (
       <Context.Provider value={this.state}>
         {this.props.children}
