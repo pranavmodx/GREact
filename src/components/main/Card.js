@@ -4,8 +4,8 @@ import { topicIDS } from "../../context";
 
 class Card extends Component {
   fetchTopic = (currentTopicNo, dispatch, e) => {
-    console.log("Should be working");
-    console.log(e.currentTarget.name);
+//     console.log("Should be working");
+//     console.log(e.currentTarget.name);
     if (e.currentTarget.name === "Previous Topic") {
       if (currentTopicNo === 0) {
         dispatch({ type: "SHOW_TOPIC", payload: topicIDS.length - 1 });
