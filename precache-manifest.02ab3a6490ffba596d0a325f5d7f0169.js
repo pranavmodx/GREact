@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fac424a1b373e917f9dbb68c7ed249e2",
+    "revision": "65869bf0ad045893baeab6a0b42e3c12",
     "url": "/GREact/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/GREact/static/css/2.266e55a5.chunk.css"
   },
   {
-    "revision": "673f54d65865f9c05d3b",
+    "revision": "c706132a9179c44c6e9e",
     "url": "/GREact/static/css/main.93c999f7.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/GREact/static/js/2.b7edcbb9.chunk.js"
   },
   {
-    "revision": "673f54d65865f9c05d3b",
-    "url": "/GREact/static/js/main.1da48228.chunk.js"
+    "revision": "c706132a9179c44c6e9e",
+    "url": "/GREact/static/js/main.8bf8b9f1.chunk.js"
   },
   {
     "revision": "698ec36518f136a69fc8",
