@@ -26,7 +26,7 @@ class Card extends Component {
       <Consumer>
         {value => {
           const { currentWord } = this.props;
-          const { currentTopicNo, dispatch } = value;
+          const { words, currentTopicNo, dispatch } = value;
           return (
             <div className="container w-75">
               <div className="card mb-4">
@@ -49,7 +49,10 @@ class Card extends Component {
                     <span className="font-weight-bold mr-3">Topic:</span>
                     {currentWord.TOPIC}
                     <span className="ml-3 badge badge-dark badge-pill">
-                      {topicIDS[currentTopicNo + 1] - topicIDS[currentTopicNo]}
+                      {topicIDS[currentTopicNo + 1]
+                        ? topicIDS[currentTopicNo + 1] -
+                          topicIDS[currentTopicNo]
+                        : words.length - topicIDS[currentTopicNo]}
                     </span>
                     <button
                       name="Next Topic"
