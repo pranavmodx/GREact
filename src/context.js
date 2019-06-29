@@ -3,7 +3,7 @@ import greData from "./gredata.json";
 
 const Context = React.createContext();
 
-export let topicIDS = [];
+let topicIDS = [];
 for (let i = 0; i < greData.length; i++) {
   if (i === 0) {
     topicIDS.push(greData[i].ID);
@@ -11,7 +11,6 @@ for (let i = 0; i < greData.length; i++) {
     topicIDS.push(greData[i].ID);
   }
 }
-// console.log(topicIDS);
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -56,11 +55,11 @@ export class Provider extends Component {
     words: greData,
     currentWord: greData[0],
     currentTopicNo: 0,
+    topicIDS: topicIDS,
     dispatch: action => this.setState(state => reducer(state, action))
   };
 
   render() {
-    // console.log(this.state);
     return (
       <Context.Provider value={this.state}>
         {this.props.children}
