@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Consumer, topicIDS } from "../../context";
+import { Consumer } from "../../context";
 
 class Topics extends Component {
   onClick(id, dispatch) {
@@ -10,7 +10,7 @@ class Topics extends Component {
     return (
       <Consumer>
         {value => {
-          const { words, dispatch } = value;
+          const { words, topicIDS, dispatch } = value;
           return (
             <div className="container">
               <h1 className="display-3 mb-5">Topics</h1>

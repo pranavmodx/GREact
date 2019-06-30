@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import { Consumer } from "../../context";
-import { topicIDS } from "../../context";
 
 class Card extends Component {
-  fetchTopic = (currentTopicNo, dispatch, e) => {
-//     console.log("Should be working");
-//     console.log(e.currentTarget.name);
+  fetchTopic = (currentTopicNo, topicIDS, dispatch, e) => {
     if (e.currentTarget.name === "Previous Topic") {
       if (currentTopicNo === 0) {
         dispatch({ type: "SHOW_TOPIC", payload: topicIDS.length - 1 });
@@ -26,7 +23,7 @@ class Card extends Component {
       <Consumer>
         {value => {
           const { currentWord } = this.props;
-          const { words, currentTopicNo, dispatch } = value;
+          const { words, currentTopicNo, topicIDS, dispatch } = value;
           return (
             <div className="container w-75">
               <div className="card mb-4">
@@ -38,6 +35,7 @@ class Card extends Component {
                       onClick={this.fetchTopic.bind(
                         this,
                         currentTopicNo,
+                        topicIDS,
                         dispatch
                       )}
                     >
@@ -60,6 +58,7 @@ class Card extends Component {
                       onClick={this.fetchTopic.bind(
                         this,
                         currentTopicNo,
+                        topicIDS,
                         dispatch
                       )}
                     >
