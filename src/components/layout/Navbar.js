@@ -1,12 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Consumer } from "../../context";
-// import greData from "../../gredata.json";
 import Autosuggest from "react-autosuggest";
-
 import "../layout/Navbar.css";
 
-// let words = greData;
 
 class Navbar extends Component {
   constructor() {
@@ -26,10 +23,8 @@ class Navbar extends Component {
           const onKeyPress = (dispatch, e) => {
             if (e.key === "Enter") {
               e.preventDefault();
-              // console.log(e.target.value);
               for (let i = 0; i < words.length; i++) {
                 if (words[i].WORD.toLowerCase() === e.target.value.toLowerCase()) {
-                  // console.log("YES");
                   dispatch({ type: "SHOW_SEARCH_RESULT", payload: i });
                   break;
                 }
