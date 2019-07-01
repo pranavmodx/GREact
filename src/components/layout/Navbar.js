@@ -69,7 +69,7 @@ class Navbar extends Component {
       e.preventDefault();
       // console.log(e.target.value);
       for (let i = 0; i < words.length; i++) {
-        if (words[i].WORD === e.target.value) {
+        if (words[i].WORD.toLowerCase() === e.target.value.toLowerCase()) {
           // console.log("YES");
           dispatch({ type: "SHOW_SEARCH_RESULT", payload: i });
           break;
