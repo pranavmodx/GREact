@@ -31,7 +31,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         currentTopicNo: action.payload,
-        currentWord: greData[topicIDS[action.payload]]
+        currentWord: greData[state.topicIDS[action.payload]]
       };
     case "LOAD_TOPIC":
       return {
